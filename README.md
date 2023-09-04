@@ -37,6 +37,8 @@
 
 ### WD BiDi is WIP
 
+WD BiDi is still work in progress, it's not been fully implemented yet. It's been under development for the past 2 years. A few features have already been implemented.
+
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7)
 
 Domains/Modules:
@@ -46,6 +48,23 @@ Domains/Modules:
 - <code>log/</code> - can read actual console or JS logs
 - <code>input/</code> - events that happen when, for example, you submit a form. WD BiDi supports input events such as the keyboard strokes you perform.
 - <code>errors/</code> and - <code>browsing_context/</code> are high level modules
+
+We can understand the content by examining the domain. When we open the <code>browsing_context/</code> module, we observer various sub-modules such as:
+- <code>capture_screenshot/</code>
+- <code>classic_interop/</code>
+- <code>close/</code>
+- <code>context-created/</code>
+- <code>create/</code>
+- <code>dom_content_loaded/</code>
+- <code>fragment_navigated/</code>
+- <code>get_tree/</code>
+- <code>load/</code>
+- <code>navigate/</code>
+- <code>print/</code>
+- <code>reload/</code>
+- <code>set_viewport/</code>
+We can capture a screenshot, open a new browser, close it, create a new tab/window, navigate to a URL, print pages, or save to PDF, etc.
+
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/3a498c85-59bd-4649-b357-ab65c8c0a4f7)
 
@@ -108,7 +127,10 @@ It shows you a small prompt, a dialogue box asking for the username and password
       }
     }
 
+____
 
+References:
+- https://developer.chrome.com/articles/webdriver-bidi/
 
 
 
