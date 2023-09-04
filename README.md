@@ -36,6 +36,10 @@
 ----
 
 ### WD BiDi and Its Advantages
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/0b1181b6-af35-4950-b678-33217172a02c)
+
+
 WD BiDi is undoubtedly the future of browser automation!
 
 It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How?
