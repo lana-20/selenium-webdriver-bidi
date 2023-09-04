@@ -8,7 +8,7 @@
 ### Chrome DevTools Protovol (CDP)
 ### WD Classic vs CDP
 ### WD BiDi Advantages
-### WD BiDi is WIP
+### WD BiDi Implementation Status
 ### BiDi API Code Samples
 
 ----
@@ -35,9 +35,12 @@
 
 ----
 
-### WD BiDi is WIP
+### WD BiDi Implementation Status
 
-WD BiDi is still work in progress, it's not been fully implemented yet. It's been under development for the past 2 years. A few features have already been implemented.
+- BiDi specification is a WIP
+- Few [parts](https://www.selenium.dev/documentation/webdriver/bidirectional/bidirectional_w3c/) are available for Selenium and WDIO
+
+WD BiDi is still a work in progress, it's not been fully implemented yet. It's been under development for the past 2 years. A few features have already been implemented.
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7)
 
