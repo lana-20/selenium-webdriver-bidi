@@ -1,7 +1,7 @@
 [UNDER CONSTRUCTION]
 
 
-# Selenium WebDriver BiDi (WD BiDi)
+# Selenium WebDriver BiDi (WD BiDi) - BlackOps-Flavored Codified DevTools - Kismet Child of WD Classic and CDP
 
 ### Evolution of WD Classic
 ### DevTools Overview
