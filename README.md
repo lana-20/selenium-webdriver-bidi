@@ -1,3 +1,6 @@
+[UNDER CONSTRUCTION]
+
+
 # Selenium WebDriver BiDi (WD BiDi)
 
 ### Evolution of WD Classic
@@ -5,8 +8,34 @@
 ### Chrome DevTools Protovol (CDP)
 ### WD Classic vs CDP
 ### WD BiDi Advantages
-### BiDi WIP
-### BiDi API Demo
+### WD BiDi is WIP
+### BiDi API Code Samples
+
+----
+
+### Evolution of WD Classic
+
+2004 -- Selenium RC
+
+2005 -- WebDriver
+
+2009 -- Selenium WebDriver
+
+2018 -- WD becomes a W3C standard
+
+----
+
+### DevTools Overview
+
+- Tools to test and debug code for web developers.
+- When you develop a web app in an IDE, you are able to step through the code. But what if you want to debug the UI part of it? Let’s say you want to check the look and feel, e.g., verify that the correct styles were applied.
+- This is where the DevTools come into play. They are integrated into all modern-day browsers, such as Chrome, Edge, Safari and Firefox.
+- You can use DevTools to verify how your web app looks. I.e., you can view the HTML and DOM structure at a very high level and then drill down into details as required.
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/2f481d75-8c32-4967-96e1-aa17bf8e5a68)
+
+----
+
+### WD BiDi is WIP
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7)
 
@@ -18,9 +47,10 @@ Domains/Modules:
 - <code>input/</code> - events that happen when, for example, you submit a form. WD BiDi supports input events such as the keyboard strokes you perform.
 - <code>errors/</code> and - <code>browsing_context/</code> are high level modules
 
-
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/3a498c85-59bd-4649-b357-ab65c8c0a4f7)
 
+
+----
 
 ### WebDriver Bidi (BiDirectional) Protocol - Code Samples
 
