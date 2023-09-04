@@ -1,5 +1,13 @@
 # Selenium WebDriver BiDi (WD BiDi)
 
+### Evolution of WD Classic
+### DevTools Overview
+### Chrome DevTools Protovol (CDP)
+### WD Classic vs CDP
+### WD BiDi Advantages
+### BiDi WIP
+### BiDi API Demo
+
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7)
 
 Domains/Modules:
@@ -8,15 +16,15 @@ Domains/Modules:
 - <code>network/</code> - a module where you can perform network interception
 - <code>log/</code> - can read actual console or JS logs
 - <code>input/</code> - events that happen when, for example, you submit a form. WD BiDi supports input events such as the keyboard strokes you perform.
-- etc.
+- <code>errors/</code> and - <code>browsing_context/</code> are high level modules
 
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/3a498c85-59bd-4649-b357-ab65c8c0a4f7)
 
 
-## WebDriver Bidi (BiDirectional) Protocol - Code Samples
+### WebDriver Bidi (BiDirectional) Protocol - Code Samples
 
-### Sample 1 - Register Basic Authentication - Java
+#### Sample 1 - Register Basic Authentication - Java
 
 Basic Authentication is a common way to safeguard your resources on the internet.
 If you request something from the server, the request goes to the browser, the browser passes it to the server. The request is basically stating “I want authentication” and yields a dialogue box with username and password fields to fill. Once you enter the basic username and password, you’ll be able to easily access the resources. It’s a rather straightforward concept. 
