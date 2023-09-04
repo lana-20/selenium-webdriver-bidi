@@ -1,4 +1,8 @@
 # Selenium WebDriver BiDi (WD BiDi)
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7)
+
+
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/3a498c85-59bd-4649-b357-ab65c8c0a4f7)
 
 
