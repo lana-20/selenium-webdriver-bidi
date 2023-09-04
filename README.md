@@ -26,13 +26,29 @@
 
 2018 -- WD becomes a W3C standard
 - W3C makes WD a standard specification. Now, Selenium WD communicates with the browsers via the W3C protocol, not JSON wire. Selenium v4 and other tools that use WD communicate via W3C protocol.
+- The protocol was introduced to provide consistency and stability for test cases when using the WD.
 
-#### WD Classic - Automation Tools
+#### WD Classic - Automation Tools:
 - Selenium WD
+    - Open-source suite of tools (ecosystem) for automating web apps.
+    - Used for testing and simulating user interactions in the browsers.
 - WebDriverIO
+    - A test automation tool for web apps.
+    - Offers a simple syntax and built-in commands.
+    - Supports multiple browsers and devices for efficient and effective testing.
 - NightWatchJS
+    - An automated testing tool based on Node.js.
+    - Offers a simple syntax and built-in WD support.
+    - Supports E2E testing and browser automation.
 - Appium
-- Katalon, SeleniumBase, etc. - other tools use the WD under the hood. E.g., Katalon uses the Selenium jar file in the back-end, but it still comminicates via the web DevTools protocol to the browser.
+    - Open-source ecosystem for mobile automation.
+    - Allows testing of native, hybrid and mobile web apps on iOS and Android.
+    - Uses WD protocol.
+- Katalon, SeleniumBase, etc.
+    - Other tools use the Selenium WD under the hood.
+    - E.g., Katalon uses the Selenium jar file in the back-end, but it still comminicates to the browsers via the web DevTools protocol.
+ 
+
 
 ----
 
