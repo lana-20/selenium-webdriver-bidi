@@ -2,6 +2,14 @@
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7)
 
+Domains/Modules:
+- <code>session/</code> - is a basic module where you can start a BiDi session
+- <code>script/</code> - use this module to inject JS code when using WD BiDi
+- <code>network/</code> - a module where you can perform network interception
+- <code>log/</code> - can read actual console or JS logs
+- <code>input/</code> - events that happen when, for example, you submit a form. WD BiDi supports input events such as the keyboard strokes you perform.
+- etc.
+
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/3a498c85-59bd-4649-b357-ab65c8c0a4f7)
 
