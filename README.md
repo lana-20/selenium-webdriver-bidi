@@ -16,12 +16,23 @@
 ### Evolution of WD Classic
 
 2004 -- Selenium RC
+- Jason Huggins introduces the fist automation tool in 2004. RC worked by installing a remote control server in the browser machines. It sent a command to a JS engine called Selenium Core. And the Selenium Core, residing in the browser engine, executed that command. RC used to be quite popular, but came to a disadvantage because of its complex architecture. Moreover, its API was not purely object oriented.
 
 2005 -- WebDriver
+- Simon Stewart introduces the WedDriver protocol in 2005. The driver communicates to browsers via JSON wire protocol WD API.
 
 2009 -- Selenium WebDriver
+- Selenium and WebDriver merge into a new tool called Selenium WebDriver. JSON wire protocol is still used to communicate with the browsers.
 
 2018 -- WD becomes a W3C standard
+- W3C makes WD a standard specification. Now, Selenium WD communicates with the browsers via the W3C protocol, not JSON wire. Selenium v4 and other tools that use WD communicate via W3C protocol.
+
+#### WD Classic - Automation Tools
+- Selenium WD
+- WebDriverIO
+- NightWatchJS
+- Appium
+- Katalon, SeleniumBase, etc. - other tools use the WD under the hood. E.g., Katalon uses the Selenium jar file in the back-end, but it still comminicates via the web DevTools protocol to the browser.
 
 ----
 
@@ -31,46 +42,28 @@
 - When you develop a web app in an IDE, you are able to step through the code. But what if you want to debug the UI part of it? Let’s say you want to check the look and feel, e.g., verify that the correct styles were applied.
 - This is where the DevTools come into play. They are integrated into all modern-day browsers, such as Chrome, Edge, Safari and Firefox.
 - You can use DevTools to verify how your web app looks. I.e., you can view the HTML and DOM structure at a very high level and then drill down into details as required.
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/2f481d75-8c32-4967-96e1-aa17bf8e5a68)
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/2f481d75-8c32-4967-96e1-aa17bf8e5a68" width=680>
 
 ----
 
 ### WD BiDi and Its Advantages
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/0b1181b6-af35-4950-b678-33217172a02c" width=460>
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/0b1181b6-af35-4950-b678-33217172a02c)
-
-
-WD BiDi is undoubtedly the future of browser automation!
-
-It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How?
-
-It takes the best of 
-
-① Chrome Dev Tools (e.g., fast bidirectional messaging & low level control)
-
-and 
-
-② Classic WebDriver  (e.g., best x-browser support, W3C Standard, testing-oriented),
-
-and combines them into the extraordinary WebDriver BiDi protocol.
-
-WebDriver BiDi (meaning BiDirectional) is a cross-browser automation protocol.
-
-The vision behind is to give you full flexibility and let you write tests using any of your favorite tools and automate them in any browser or driver.
+WD BiDi is a cross-browser automation protocol. It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How? It takes the best of <code>Chrome Dev Tools</code> (e.g., fast bidirectional messaging & low level control) and <code>Classic WebDriver</code> (e.g., best x-browser support, W3C Standard, testing-oriented), and combines them into the extraordinary WebDriver BiDi protocol. The vision behind BiDi is to give you full flexibility and let you write tests using any of your favorite tools and automate them in any browser or driver.
 
 The WebDriver BiDi collaborators are a diverse group. It includes:
 
-① Browser Vendors: Chrome, Edge, Firefox, Safari;
-
-② Open Source Automation Projects: Selenium, WebDriverIO;
-
-③ Companies offering Browser Automation Solutions: BrowserStack, SauceLabs.
+- Browser Vendors: Chrome, Edge, Firefox, Safari
+- Open Source Automation Projects: Selenium, WebDriverIO
+- Companies offering Browser Automation Solutions: BrowserStack, SauceLabs.
 
 This is certainly an exciting future for test automation. It takes a huge effort from various vendors working together to ensure this future.
 
 Selenium, WebDriverIO, Puppeteer and Playwright have already introduced initial support for WebDriver BiDi.
 
 One of the main features is Low Level Control. I.e., monitoring console messages to help verify the uncaught exceptions and intended logs. There's also full interoperability between WebDriver Classic and BiDi.
+
+WD BiDi is undoubtedly the future of browser automation!
 ____
 
 ### WD BiDi Implementation Status
