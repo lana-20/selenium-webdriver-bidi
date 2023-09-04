@@ -7,7 +7,7 @@
 ### DevTools Overview
 ### Chrome DevTools Protovol (CDP)
 ### WD Classic vs CDP
-### WD BiDi Advantages
+### WD BiDi and Its Advantages
 ### WD BiDi Implementation Status
 ### BiDi API Code Samples
 
@@ -34,6 +34,40 @@
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/2f481d75-8c32-4967-96e1-aa17bf8e5a68)
 
 ----
+
+### WD BiDi and Its Advantages
+WD BiDi is undoubtedly the future of browser automation!
+
+It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How?
+
+It takes the best of 
+
+① Chrome Dev Tools (e.g., fast bidirectional messaging & low level control)
+
+and 
+
+② Classic WebDriver  (e.g., best x-browser support, W3C Standard, testing-oriented),
+
+and combines them into the extraordinary WebDriver BiDi protocol.
+
+WebDriver BiDi (meaning BiDirectional) is a cross-browser automation protocol.
+
+The vision behind is to give you full flexibility and let you write tests using any of your favorite tools and automate them in any browser or driver.
+
+The WebDriver BiDi collaborators are a diverse group. It includes:
+
+① Browser Vendors: Chrome, Edge, Firefox, Safari;
+
+② Open Source Automation Projects: Selenium, WebDriverIO;
+
+③ Companies offering Browser Automation Solutions: BrowserStack, SauceLabs.
+
+This is certainly an exciting future for test automation. It takes a huge effort from various vendors working together to ensure this future.
+
+Selenium, WebDriverIO, Puppeteer and Playwright have already introduced initial support for WebDriver BiDi.
+
+One of the main features is Low Level Control. I.e., monitoring console messages to help verify the uncaught exceptions and intended logs. There's also full interoperability between WebDriver Classic and BiDi.
+____
 
 ### WD BiDi Implementation Status
 
