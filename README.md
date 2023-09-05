@@ -87,6 +87,9 @@ Here is a specific example of CDP implementation by Puppeteer:
     await  page._client.send('Input.dispatchMouseEvent', { type: 'mouseReleased', ... });
 
 
+#### Selenium CDP Support
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/d336cd7e-5f83-4077-b16d-358a30eb904b)
 
 
 ----
@@ -105,12 +108,6 @@ Once we have a solid understanding of the WD Classic and CDP, it's easier to und
 
 WD BiDi is a cross-browser automation protocol. It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How? It takes the best of <code>Chrome Dev Tools</code> (e.g., fast bidirectional messaging & low level control) and <code>Classic WebDriver</code> (e.g., best x-browser support, W3C Standard, testing-oriented), and combines them into the extraordinary WebDriver BiDi protocol. The vision behind BiDi is to give you full flexibility and let you write tests using any of your favorite tools and automate them in any browser or driver.
 
-The WebDriver BiDi collaborators are a diverse group. It includes:
-
-- Browser Vendors: Chrome, Edge, Firefox, Safari
-- Open Source Automation Projects: Selenium, WebDriverIO
-- Companies offering Browser Automation Solutions: BrowserStack, SauceLabs.
-
 This is certainly an exciting future for test automation. It takes a huge effort from various vendors working together to ensure this future.
 
 Selenium, WebDriverIO, Puppeteer and Playwright have already introduced initial support for WebDriver BiDi.
@@ -122,10 +119,14 @@ ____
 
 ### WD BiDi Implementation Status
 
-- BiDi specification is a WIP
-- A few [modules](https://www.selenium.dev/documentation/webdriver/bidirectional/bidirectional_w3c/) have already been implemented for Selenium and WebDriverIO
+WD BiDi is still a work in progress, it's not been fully implemented yet. It's been under development for the past 2 years.
 
-WD BiDi is still a work in progress, it's not been fully implemented yet. It's been under development for the past 2 years. A few features are currently available.
+- WD BiDi specification is a WIP, supported by diverse collaborators, such as:
+    - Browser Vendors: Chrome, Edge, Firefox, Safari
+    - Open Source Automation Projects: Selenium, WebDriverIO
+    - Companies offering Browser Automation Solutions: BrowserStack, SauceLabs.
+- A few [modules](https://www.selenium.dev/documentation/webdriver/bidirectional/bidirectional_w3c/) have already been implemented for Selenium and WebDriverIO and can be used in automation scripts.
+
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7)
 
