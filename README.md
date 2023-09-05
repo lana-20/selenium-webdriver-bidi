@@ -65,26 +65,6 @@ WD Classic was created in 2005. It's been a 18+ year long journey.
 
 ----
 
-### Chrome DevTools Protocol (CDP) - Automation Tools
-
-Playwright and Puppeteer use CDP to control Chromium-based browsers (Chrome, Edge, Opera) programmatically for web automation and testing purposes.
-
-For example, in order to Click a button, WD Classic would identify the button element, move the mouse cursor over the element (it injects a mouse event) and perform the click action on that element. CDP simulates the analogous Click action on the button in a different way. CDP has a different implementation in the back-end, when we perform the Click action.
-
-In short, CDP performs 3 actions in the back-end:
-
-1. <code>DOM.performSearch</code> -- performs the search operation to identify the element
-2. <code>DOM.querySelector</code> -- uses querySelect to select the element
-3. <code>DOM.dispatchEvent</code> -- dispatches an event to simulate the Click action on that element
-
-Here is a specific example of CDP implementation by Puppeteer:
-
-    await page._client.send('DOM.performSearch', { query: buttonSelector });
-    // id for search results
-    await  page._client.send('DOM.performSearch', { query: ' ', searchId });
-    await  page._client.send('Input.dispatchMouseEvent', { type: 'mousePressed', ... });
-    await  page._client.send('Input.dispatchMouseEvent', { type: 'mouseReleased', ... });
-
 #### CDP Definition
 
 Need for protocol:
@@ -147,6 +127,27 @@ When we do devTools.send(), we are sending the command.
         driver.get(“https://my-location.org/”);
         driver.quit();
 
+
+#### CDP - Automation Tools
+
+Playwright and Puppeteer use CDP to control Chromium-based browsers (Chrome, Edge, Opera) programmatically for web automation and testing purposes.
+
+For example, in order to Click a button, WD Classic would identify the button element, move the mouse cursor over the element (it injects a mouse event) and perform the click action on that element. CDP simulates the analogous Click action on the button in a different way. CDP has a different implementation in the back-end, when we perform the Click action.
+
+In short, CDP performs 3 actions in the back-end:
+
+1. <code>DOM.performSearch</code> -- performs the search operation to identify the element
+2. <code>DOM.querySelector</code> -- uses querySelect to select the element
+3. <code>DOM.dispatchEvent</code> -- dispatches an event to simulate the Click action on that element
+
+Here is a specific example of CDP implementation by Puppeteer:
+
+    await page._client.send('DOM.performSearch', { query: buttonSelector });
+    // id for search results
+    await  page._client.send('DOM.performSearch', { query: ' ', searchId });
+    await  page._client.send('Input.dispatchMouseEvent', { type: 'mousePressed', ... });
+    await  page._client.send('Input.dispatchMouseEvent', { type: 'mouseReleased', ... });
+
 ----
 
 ### WD Classic vs CDP
@@ -185,9 +186,9 @@ WD Classic | CDP |
 
 #### CDP - Disadvantages:
 - Browser Compatibility - Chromium Only
-    - This specific protocol is designed to be consistent only for the Chromium browsers. CDP doesn’t work with other browsers on the market, like Safari and Firefox. Mozilla has done a great job at implementing a subset of CDP, but that is just for Puppeteer support. The support is rather incomplete, so anytime we are using Firefox, there’s a good chance things will break while using CDP, because of this partial half-baked support.
+    - This specific protocol is designed to be consistent only for the Chromium browsers. CDP doesn’t work with other browsers, like Safari and Firefox. Other browsers on the market have their own proprietary protocols and interfaces. Mozilla has done a great job at implementing a subset of CDP, but that is just for Puppeteer support. The support is rather incomplete, so anytime we are using Firefox, there’s a good chance things will break while using CDP, because of this partial half-baked support.
 - Version-Specific Dependencies
-    - CDP has a caveat - it’s specific to the version. With every version there might be a breaking change. We write your code today and send our CDP commands via this code. Let’s say we’re sending 4 parameters. And tomorrow with the new Chrome version it might require 5 parameters, and our code will break. It affects the durability. We don’t want the code to break, hence due to frequent Chrome releases, we'll have to deal with overhead.
+    - CDP has a caveat - it’s specific to the Chrome browser version. For every Google Chrome version release, there is a respective new release of a CDP version. This might cause a breaking change. Certain features might get deprecated or modified, affecting backward compatibility. We might write our code today and send CDP commands via this code. A test script written for the current browser version might not work for a previous or future browser version. Let’s say we’re sending 4 parameters. And tomorrow with the new Chrome version it might require 5 parameters, and our code will break. It affects the durability. We don’t want the code to break, hence due to frequent Chrome releases, we'll have to deal with overhead.
 - Lacks Accommodation for Automation Needs
     - And while CDP supports automation, it’s important to understand that it was not designed with automation in mind. It was designed to provide this physical DevTools experience. It doesn’t keep that need for common automation use cases. It doesn’t necessarily address that in a straightforward manner.
 
@@ -197,6 +198,8 @@ WD Classic | CDP |
 ### WD BiDi - Advantages
 
 Once we have a solid understanding of the WD Classic and CDP, it's easier to understand why BiDi was created and came into play.
+
+At a certain point, Chromium developers wondered why shouldn't they merge both WD Classic and CDP tools into one protocol, so that they could utilize the power of both tools. That's how WD BiDi was born.
 
 <img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/0b1181b6-af35-4950-b678-33217172a02c" width=460>
 
