@@ -160,6 +160,21 @@ Standard W3C protocol, supported by all browsers | Supports only Chromium-based 
 Communicates via HTTP requests | Communicates via WebSocket |
 Does not support low-level controls | Supports low-level controls |
 
+#### WD Classic - Limitations:
+- Synchronous Nature
+    - WD commands are generally synchronous in nature. It means that the client sends and HTTP request and waits for a response from the browser server before proceeding to the next command.
+    - E.g., if we want to click a button, first we need to vefify that the button is enabled and is clickable, and then perform the click action. To achieve this, WD sends 3 synchronous requests one-by-one in order to make sure that the element is 1) visible and 2) clickable, and 3) performs the click action.
+    - Due to its synchronous nature, WD waits until an operation is processed on the server side -- this is a performance concern.
+- Limited Low-Level DevTools Control
+    - Some of the low-level DevTools controls, such as Performance Profiling, Network Interception, Advanced DOM Inspection, and JavaScript Console Interactions, are not available in WD Classic.
+- Unidirectional Communication
+    - WD Classic is slow because it lacks the BiDirectional communication with the browser. It means the users have to poll for element availability or visibility, which leads to delays in test automation.
+    - Because WD Classic is synchronous and unidirectional, we can send a request and receive response messages for that request at a later time. But we can't actually know what's happening on the browser server side.
+
+#### CDP - Limitations:
+- Browser Compatibility
+- Version Dependency for DevTools Control
+
 ----
 
 ### WD BiDi and Its Advantages
