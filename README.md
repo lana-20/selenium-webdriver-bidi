@@ -124,6 +124,29 @@ Domains, Commands, and Events are the three core concepts of CDP.
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/d336cd7e-5f83-4077-b16d-358a30eb904b)
 
+First, ChromeDriver is getting initialized. A simple session is created with the ChromeDriver.
+
+        ChromeDriver driver = new ChromeDriver();
+
+We get the DevTools instance (for later use).
+
+        DevTools devTools = driver.getDevTools();
+
+Then we create a session - that is our initial WebSocket handshake connection that is established. So when you do createSession, the WebSocket connection is established. And there are certain Domains, Events, and Commands that would need to be called for that handshake - that’s what happens in the background as part of it.
+
+        devTools.createSession();
+
+Later we move on to actually sending the commands. 
+When we do devTools.send(), we are sending the command.
+
+        devTools.send(
+        Emulation.setGeolocationOverride(
+        Optional.of(47.604653),
+        Optional.of(-122.335461),
+        Optional.of(1)));
+        
+        driver.get(“https://my-location.org/”);
+        driver.quit();
 
 ----
 
