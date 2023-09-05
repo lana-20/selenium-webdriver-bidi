@@ -159,7 +159,7 @@ Standard W3C protocol, supported by all browsers | Supports only Chromium-based 
 Communicates via HTTP requests | Communicates via WebSocket |
 Does not support low-level controls | Supports low-level controls |
 
-#### WD Classic - Limitations:
+#### WD Classic - Disadvantages:
 - Synchronous Nature
     - WD commands are generally synchronous in nature. It means that the client sends and HTTP request and waits for a response from the browser server before proceeding to the next command.
     - E.g., if we want to click a button, first we need to vefify that the button is enabled and is clickable, and then perform the click action. To achieve this, WD sends 3 synchronous requests one-by-one in order to make sure that the element is 1) visible and 2) clickable, and 3) performs the click action.
@@ -170,13 +170,18 @@ Does not support low-level controls | Supports low-level controls |
     - WD Classic is slow because it lacks the BiDirectional communication with the browser. It means the users have to poll for element availability or visibility, which leads to delays in test automation.
     - Because WD Classic is synchronous and unidirectional, we can send a request and receive response messages for that request at a later time. But we can't actually know what's happening on the browser server side.
 
-#### CDP - Limitations:
-- Browser Compatibility
-- Version Dependency for DevTools Control
+#### CDP - Disadvantages:
+- Browser Compatibility - Chromium Only
+    - This specific protocol is designed to be consistent only for the Chromium browsers. CDP doesn’t work with other browsers on the market, like Safari and Firefox. Mozilla has done a great job at implementing a subset of CDP, but that is just for Puppeteer support. The support is rather incomplete, so anytime we are using Firefox, there’s a good chance things will break while using CDP, because of this partial half-baked support.
+- Version-Specific Dependencies
+    - CDP has a caveat - it’s specific to the version. With every version there might be a breaking change. We write your code today and send our CDP commands via this code. Let’s say we’re sending 4 parameters. And tomorrow with the new Chrome version it might require 5 parameters, and our code will break. It affects the durability. We don’t want the code to break, hence due to frequent Chrome releases, we'll have to deal with overhead.
+- Lacks Accommodation for Automation Needs
+    - And while CDP supports automation, it’s important to understand that it was not designed with automation in mind. It was designed to provide this physical DevTools experience. It doesn’t keep that need for common automation use cases. It doesn’t necessarily address that in a straightforward manner.
+
 
 ----
 
-### WD BiDi and Its Advantages
+### WD BiDi - Advantages
 
 Once we have a solid understanding of the WD Classic and CDP, it's easier to understand why BiDi was created and came into play.
 
