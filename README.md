@@ -155,9 +155,22 @@ In recent years, CDP has gained a lot of traction in the automation industry. Le
 
 WD Classic | CDP |
 ---|---|
-Standard W3C protocol, supported by all browsers | Supports only Chromium-based browsers |
-Communicates via HTTP requests | Communicates via WebSocket |
-Does not support low-level controls | Supports low-level controls |
+🔵 Standard protocol, supported by all browsers | 🔵 Supports only Chromium-based browsers |
+🔴 Communicates via HTTP requests | 🔴 Communicates via WebSocket |
+🟣 Does not support low-level controls | 🟣 Supports low-level controls |
+
+🔵 WD Classic is a standard protocol designed according to the W3C specificiation.
+
+🔵 CDP is a protocol, but it only supports Chromium-based browsers, such as Chrome and Edge.
+
+🔴 WD Classic starts an HTTP server in the back-end and sends the commands to the browser driver. The driver carries these instructions on to the browser. Communication happens via the traditional HTTP response/request protocol.
+
+🔴 CDP uses a WebSocket which is bidirectional in nature. WebSocket has the capacity to send the commands and concurrently listen to the events/messages from the server in real time.
+
+🟣 WD Classic can perform operations in the browser UI, but cannot perform those operations in the DevTools console. It can't control the DevTools programmatically. We cannot access network requests, console components, errors or events that happen in the DevTools.
+
+🟣 CDP has a the power of accessing the browser DevTools. It can get the messages or errors from the console, mock the network requests, or wait until the DOM changes.
+
 
 #### WD Classic - Disadvantages:
 - Synchronous Nature
