@@ -5,7 +5,7 @@
 
 ### Evolution of WD Classic
 ### DevTools Overview
-### Chrome DevTools Protovol (CDP)
+### Chrome DevTools Protocol (CDP)
 ### WD Classic vs CDP
 ### WD BiDi and Its Advantages
 ### WD BiDi Implementation Status
@@ -14,6 +14,10 @@
 ----
 
 ### Evolution of WD Classic
+
+WD Classic was created in 2005. It's been a 18+ year long journey.
+
+#### WD Classic - History:
 
 2004 -- Selenium RC
 - Jason Huggins introduces the fist automation tool in 2004. RC worked by installing a remote control server in the browser machines. It sent a command to a JS engine called Selenium Core. And the Selenium Core, residing in the browser engine, executed that command. RC used to be quite popular, but came to a disadvantage because of its complex architecture. Moreover, its API was not purely object oriented.
@@ -62,7 +66,41 @@
 
 ----
 
+### Chrome DevTools Protocol (CDP) - Automation Tools
+
+Playwright and Puppeteer use CDP to control Chromium-based browsers (Chrome, Edge, Opera) programmatically for web automation and testing purposes.
+
+For example, in order to Click a button, WD Classic would identify the button element, move the mouse cursor over the element (it injects a mouse event) and perform the click action on that element. CDP simulates the analogous Click action on the button in a different way. CDP has a different implementation in the back-end, when we perform the Click action.
+
+In short, CDP performs 3 actions in the back-end:
+
+1. <code>DOM.performSearch</code> -- performs the search operation to identify the element
+2. <code>DOM.querySelector</code> -- uses querySelect to select the element
+3. <code>DOM.dispatchEvent</code> -- dispatches an event to simulate the Click action on that element
+
+Here is a specific example of CDP implementation by Puppeteer:
+
+    await page._client.send('DOM.performSearch', { query: buttonSelector });
+    // id for search results
+    await  page._client.send('DOM.performSearch', { query: ' ', searchId });
+    await  page._client.send('Input.dispatchMouseEvent', { type: 'mousePressed', ... });
+    await  page._client.send('Input.dispatchMouseEvent', { type: 'mouseReleased', ... });
+
+
+
+
+----
+
+### WD Classic vs CDP
+
+In recent years, CDP has been a big hype in the automation industry.
+
+----
+
 ### WD BiDi and Its Advantages
+
+Once we have a solid understanding of the WD Classic and CDP, it's easier to understand why BiDi was created and came into play.
+
 <img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/0b1181b6-af35-4950-b678-33217172a02c" width=460>
 
 WD BiDi is a cross-browser automation protocol. It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How? It takes the best of <code>Chrome Dev Tools</code> (e.g., fast bidirectional messaging & low level control) and <code>Classic WebDriver</code> (e.g., best x-browser support, W3C Standard, testing-oriented), and combines them into the extraordinary WebDriver BiDi protocol. The vision behind BiDi is to give you full flexibility and let you write tests using any of your favorite tools and automate them in any browser or driver.
@@ -85,9 +123,9 @@ ____
 ### WD BiDi Implementation Status
 
 - BiDi specification is a WIP
-- Few [parts](https://www.selenium.dev/documentation/webdriver/bidirectional/bidirectional_w3c/) are available for Selenium and WDIO
+- A few [modules](https://www.selenium.dev/documentation/webdriver/bidirectional/bidirectional_w3c/) have already been implemented for Selenium and WebDriverIO
 
-WD BiDi is still a work in progress, it's not been fully implemented yet. It's been under development for the past 2 years. A few features have already been implemented.
+WD BiDi is still a work in progress, it's not been fully implemented yet. It's been under development for the past 2 years. A few features are currently available.
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7)
 
