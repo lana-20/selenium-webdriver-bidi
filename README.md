@@ -52,10 +52,12 @@ WD Classic was created in 2005. It's been a 18+ year long journey.
     - E.g., Katalon uses the Selenium jar file in the back-end, but it still comminicates to the browsers via the web DevTools protocol.
  
 
-
 ----
 
-### DevTools Overview
+### Evolution of CDP
+
+
+#### DevTools Overview
 
 - Tools to test and debug code for web developers.
 - When you develop a web app in an IDE, you are able to step through the code. But what if you want to debug the UI part of it? Let’s say you want to check the look and feel, e.g., verify that the correct styles were applied.
@@ -63,7 +65,6 @@ WD Classic was created in 2005. It's been a 18+ year long journey.
 - You can use DevTools to verify how your web app looks. I.e., you can view the HTML and DOM structure at a very high level and then drill down into details as required.
 <img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/2f481d75-8c32-4967-96e1-aa17bf8e5a68" width=680>
 
-----
 
 #### CDP Definition
 
@@ -82,6 +83,7 @@ E.g.: You have a Chrome browser. It has all the information about any event that
 That’s why we need a Protocol. It provides consistency for all Chromium-based browsers, like Edge or Chrome – they understand CDP and know how to work with it. And hence the browsers have the DevTools window available. 
 
 Additionally, since CDP is able to communicate with a browser driver - e.g., the Chrome Driver - the same protocol is used for the driver, which makes it easier to use it for automation purposes as well. Chrome driver is a binary that we use for testing purposes, which knows how to talk to the browser and drive it. 
+
 
 #### CDP Structure
 
@@ -197,11 +199,19 @@ WD Classic | CDP |
 
 ### WD BiDi - Advantages
 
-Once we have a solid understanding of the WD Classic and CDP, it's easier to understand why BiDi was created and came into play.
-
-At a certain point, Chromium developers wondered why shouldn't they merge both WD Classic and CDP tools into one protocol, so that they could utilize the power of both tools. That's how WD BiDi was born.
+Once we have a solid understanding of the WD Classic and CDP, it's easier to understand why BiDi was created and came into play. At a certain point, Chromium developers wondered why shouldn't they merge both WD Classic and CDP tools into one protocol, so that they could utilize the power of both tools. That's how WD BiDi was born.
 
 <img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/0b1181b6-af35-4950-b678-33217172a02c" width=460>
+
+#### BiDi - Road to Better Automation
+
+Why BiDi?
+- Standardized approach
+- Not specific to browser versions
+- Created with automation scenarios in mind
+- Complementary to WD protocol, with an option to only have the BiDi connection.
+- Low-level debugging capability
+- Developed by leading browser vendors together, keeping browsers in mind
 
 WD BiDi is a cross-browser automation protocol. It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How? It takes the best of <code>Chrome DevTools Protocol</code> (e.g., fast bidirectional messaging & low level control) and <code>Classic WebDriver</code> (e.g., best x-browser support, W3C Standard, testing-oriented), and combines them into the extraordinary WebDriver BiDi protocol. The vision behind BiDi is to give you full flexibility and let you write tests using any of your favorite tools and automate them in any browser or driver.
 
