@@ -86,7 +86,7 @@ Here is a specific example of CDP implementation by Puppeteer:
     await  page._client.send('Input.dispatchMouseEvent', { type: 'mousePressed', ... });
     await  page._client.send('Input.dispatchMouseEvent', { type: 'mouseReleased', ... });
 
-#### What is CDP?
+#### CDP Definition
 
 Need for protocol:
 - Automation support
@@ -103,6 +103,21 @@ E.g.: You have a Chrome browser. It has all the information about any event that
 That’s why we need a Protocol. It provides consistency for all Chromium-based browsers, like Edge or Chrome – they understand CDP and know how to work with it. And hence the browsers have the DevTools window available. 
 
 Additionally, since CDP is able to communicate with a browser driver - e.g., the Chrome Driver - the same protocol is used for the driver, which makes it easier to use it for automation purposes as well. Chrome driver is a binary that we use for testing purposes, which knows how to talk to the browser and drive it. 
+
+#### CDP Structure
+
+Concepts:
+- Domains
+- Commands
+- Events
+
+CDP is divided into Domains, Commands, and Events. In the OOP analogy, we have classes which group the related methods and properties together. Similarly, a Domain is a special logical grouping of all the Commands and Events that keeps them all in one place. That is how it’s structured.
+
+Commands give instructions to the browser to do something. We give it a command, instruct it to perform a certain action, or instruct it to retrieve certain data.
+
+An Event is a signal that something has happened in the system. Browsers are intrinsically even-driven in nature. When the DOM is loaded, there are lots of events that are fired, and the browser picks these up and uses this information in the DevTools window. DOM is just one example. The Protocol avails lots of events which the browser is driven by.
+
+Domains, Commands, and Events are the three core concepts of CDP. 
 
 
 #### Selenium CDP Support
