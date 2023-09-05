@@ -152,7 +152,13 @@ When we do devTools.send(), we are sending the command.
 
 ### WD Classic vs CDP
 
-In recent years, CDP has been a big hype in the automation industry.
+In recent years, CDP has gained a lot of traction in the automation industry. Let's compare <code>WD Classic</code> and <code>CDP</code> side by side.
+
+WD Classic | CDP |
+---|---|
+Standard W3C protocol, supported by all browsers | Supports only Chromium-based browsers |
+Communicates via HTTP requests | Communicates via WebSocket |
+Does not support low-level controls | Supports low-level controls |
 
 ----
 
