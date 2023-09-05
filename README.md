@@ -86,6 +86,24 @@ Here is a specific example of CDP implementation by Puppeteer:
     await  page._client.send('Input.dispatchMouseEvent', { type: 'mousePressed', ... });
     await  page._client.send('Input.dispatchMouseEvent', { type: 'mouseReleased', ... });
 
+#### What is CDP?
+
+Need for protocol:
+- Automation support
+- Extended debuggability
+- Consistency
+
+Why do we need this protocol in the first place? It’s in the browser, the browser understands everything. Why do we need a protocol?
+
+Essentially, the need for a protocol arises in the context of a contract between two parties which communicate with each other. Any entity can act as such a party to the contract. The parties need to be aware of the common shared semantics, what response they receive, as well as the format of the response. The receiver can understand the content they receive, and vice versa - the receiver responds back to the sender, and the sender can interpret what they receive. This forms the foundation of any global protocol that exists.
+
+CDP exists to provide the capacity to communicate between the DevTools and the browser, and vice versa.
+E.g.: You have a Chrome browser. It has all the information about any event that happens – when DOM is loaded, network requests are being fired, or even performance-related information, when we download a resource or get more resources. But the browser needs to pipe this information through, to communicate it to the DevTools interface, so that we can actually verify that it’s there. This communication between the browser and the DevTools happens using CDP. It’s a common language they both understand. 
+
+That’s why we need a Protocol. It provides consistency for all Chromium-based browsers, like Edge or Chrome – they understand CDP and know how to work with it. And hence the browsers have the DevTools window available. 
+
+Additionally, since CDP is able to communicate with a browser driver - e.g., the Chrome Driver - the same protocol is used for the driver, which makes it easier to use it for automation purposes as well. Chrome driver is a binary that we use for testing purposes, which knows how to talk to the browser and drive it. 
+
 
 #### Selenium CDP Support
 
@@ -106,7 +124,7 @@ Once we have a solid understanding of the WD Classic and CDP, it's easier to und
 
 <img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/0b1181b6-af35-4950-b678-33217172a02c" width=460>
 
-WD BiDi is a cross-browser automation protocol. It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How? It takes the best of <code>Chrome Dev Tools</code> (e.g., fast bidirectional messaging & low level control) and <code>Classic WebDriver</code> (e.g., best x-browser support, W3C Standard, testing-oriented), and combines them into the extraordinary WebDriver BiDi protocol. The vision behind BiDi is to give you full flexibility and let you write tests using any of your favorite tools and automate them in any browser or driver.
+WD BiDi is a cross-browser automation protocol. It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How? It takes the best of <code>Chrome DevTools Protocol</code> (e.g., fast bidirectional messaging & low level control) and <code>Classic WebDriver</code> (e.g., best x-browser support, W3C Standard, testing-oriented), and combines them into the extraordinary WebDriver BiDi protocol. The vision behind BiDi is to give you full flexibility and let you write tests using any of your favorite tools and automate them in any browser or driver.
 
 This is certainly an exciting future for test automation. It takes a huge effort from various vendors working together to ensure this future.
 
