@@ -242,7 +242,25 @@ Why BiDi? How can we take advantage of WD BiDi in our automation scripts?
     - There’s a working group that meets every month to discuss, design, and iterate over this protocol. That group consists of members from Puppeteer, Selenium, all browser vendors coming together to pitch ideas, to discuss what happens. They publish the meeting agenda and minutes publicly. It’s a good collaborative effort keeping the entire automation in mind.
 
 WD BiDi is undoubtedly the future of browser automation!
-____
+
+#### Low Level Debugging Control
+
+- Listen to JS errors
+    - WD BiDi listens to JS errors, allowing real-time detection and reporting, enhancing debugging capabilities during test execution.
+        - If we have a JS-rich app that throws an error at some point in your automation, we can listen to those errors with WD BiDi and debug them to fix our issue.
+- Listen to console logs
+    - WD BiDi enables real-time capture and analysis of console logs, aiding in debugging and logging during test execution.
+        - We can listen to the browser console in the app and fetch the logs for the debuggin purpose.
+- DOM Mutation
+    - WD BiDi allows monitoring and reacting to changes in the DOM, facilitating dynamic web app testing and validation.
+        - We can monitor the DOM structure/tree. BiDi can trigger an event whenever we want to inject any script.
+- Network Interception
+    - WD BiDi enables capture and manipulation of network requests, facilitating advanced testing and analysis of web app performance.
+        - We can listen to the incoming network requests/responses for the browser and intercept them,
+     
+With BiDi, we can also use the Browser Context module, inject scripts, and perform all sorts of DevTools low-level controls.
+
+___
 
 ### WD BiDi Implementation Status
 
@@ -280,9 +298,7 @@ We can understand the content by examining the domain. When we open the <code>br
 - <code>set_viewport/</code>
 We can capture a screenshot, open a new browser, close it, create a new tab/window, navigate to a URL, print pages, or save to PDF, etc.
 
-
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/3a498c85-59bd-4649-b357-ab65c8c0a4f7)
-
 
 ----
 
