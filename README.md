@@ -201,7 +201,9 @@ WD Classic | CDP |
 
 Once we have a solid understanding of the WD Classic and CDP, it's easier to understand why BiDi was created and came into play. At a certain point, Chromium developers wondered why shouldn't they merge both WD Classic and CDP tools into one protocol, so that they could utilize the power of both tools. That's how WD BiDi was born.
 
-WD BiDi is a cross-browser automation protocol. It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How? It takes the best of <code>Chrome DevTools Protocol</code> (e.g., fast bidirectional messaging & low level control) and <code>Classic WebDriver</code> (e.g., best cross-browser support, W3C Standard, testing-oriented), and combines them into the extraordinary WebDriver BiDi protocol. The vision behind BiDi is to give you full flexibility and let you write tests using any of your favorite tools and automate them in any browser or driver.
+WD BiDi is a new standard protocol, but it was not built entirely from scratch. It's developed over WD, allowing us to continue working with WD Classic while utilizing the power of CDP.
+
+WD BiDi is a cross-browser automation protocol. It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How? It takes the best of <code>Chrome DevTools Protocol</code> (e.g., fast bidirectional messaging & low level control) and <code>WebDriver Classic</code> (e.g., best cross-browser support, W3C Standard, testing-oriented), and combines them into the extraordinary WebDriver BiDi protocol. The vision behind BiDi is to give you full flexibility and let you write tests using any of your favorite tools and automate them in any browser or driver.
 
 This is certainly an exciting future for test automation. It takes a huge effort from various vendors working together to ensure this future.
 
@@ -211,7 +213,7 @@ Selenium, WebDriverIO, Puppeteer and Playwright have already introduced initial 
 
 #### BiDi - Road to Better Automation
 
-Why BiDi?
+Why BiDi? How can we take advantage of WD BiDi in our automation scripts?
 - Standardized approach - W3C compliance
     - By adhering to the W3C WD specification, BiDi ensures standardized browser automation for consistency and compatibility with various tools and frameworks.
     - WD BiDi is developed by the W3C committee, which developed the WD protocol. WD is not hosted and maintained by one organization. It’s a standardized approach, all browser vendors have to  implement the same API to allow testing. Any action we perform with WD BiDi is the same action in all the browsers. The approach that BiDi follows is relatively the same as WD, but it uses web sockets. 
@@ -225,13 +227,17 @@ Why BiDi?
 
 - Complementary to WD protocol, with an option to only have the BiDi connection.
 
+- Low latency, bidirectional communication
+    - WD BiDi enables snappy bidirectional communication, allowing the browser to send real-time updates to the test script, improving synchronization and making testing faster and more reliable.
+    - Our automation scripts will be faster than the previous implementation, because WD BiDi comminicates via a bidirectional web socket. We can be aware of what's happening in the browser in real time without sending a synchronous request.
+
 - Low-level debugging control
     - WD BiDi offers low-level browser control, enabling advanced interactions, complex scenario simulation and thorough testing, especially useful for JS-heavy or browser-specific features in web apps.
     - Even when we use WD Classic in our scripts, we can still add WD BiDi and gain access to the DevTools to monitor console messages to help verify the uncaught exceptions and intended logs. We can also listen to JS exceptions, console logs, mock test data, intercept a network request, etc.
     - It gives you all the low-level debugging capability that you have in CDP. It doesn’t mean that CDP is the same as BiDi, that we just lift and pick the same protocol. A lot of thought process goes into what is required, what is needed, what is not heavy for the browsers. Keep in mind, CDP is very heavy and complex for browsers to implement. BiDi is designed keeping both the browser vendors and the end users in mind.
 
 - Developed by leading browser vendors together, keeping browsers in mind
-
+    - There’s a working group that meets every month to discuss, design, and iterate over this protocol. That group consists of members from Puppeteer, Selenium, all browser vendors coming together to pitch ideas, to discuss what happens. They publish the meeting agenda and minutes publicly. It’s a good collaborative effort keeping the entire automation in mind.
 
 WD BiDi is undoubtedly the future of browser automation!
 ____
