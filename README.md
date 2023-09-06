@@ -222,8 +222,14 @@ Why BiDi?
     - It’s not browser-specific. Once the BiDi protocol is in place, version specifics become a noise for a browser. Browsers are required to adapt the entire protocol as it is. They might do it incrementally until they complete it. And the protocol itself is something that can evolve (add/delete/modify items), but it will never lead to breaking changes.
 
 - Created with automation scenarios in mind
+
 - Complementary to WD protocol, with an option to only have the BiDi connection.
-- Low-level debugging capability
+
+- Low-level debugging control
+    - WD BiDi offers low-level browser control, enabling advanced interactions, complex scenario simulation and thorough testing, especially useful for JS-heavy or browser-specific features in web apps.
+    - Even when we use WD Classic in our scripts, we can still add WD BiDi and gain access to the DevTools to monitor console messages to help verify the uncaught exceptions and intended logs. We can also listen to JS exceptions, console logs, mock test data, intercept a network request, etc.
+    - It gives you all the low-level debugging capability that you have in CDP. It doesn’t mean that CDP is the same as BiDi, that we just lift and pick the same protocol. A lot of thought process goes into what is required, what is needed, what is not heavy for the browsers. Keep in mind, CDP is very heavy and complex for browsers to implement. BiDi is designed keeping both the browser vendors and the end users in mind.
+
 - Developed by leading browser vendors together, keeping browsers in mind
 
 
