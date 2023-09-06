@@ -224,6 +224,8 @@ Why BiDi? How can we take advantage of WD BiDi in our automation scripts?
     - It’s not browser-specific. Once the BiDi protocol is in place, version specifics become a noise for a browser. Browsers are required to adapt the entire protocol as it is. They might do it incrementally until they complete it. And the protocol itself is something that can evolve (add/delete/modify items), but it will never lead to breaking changes.
 
 - Created with automation scenarios in mind
+    - The protocol is developed with keeping automation scenarios in mind. It provides domains, events and commands, but it will never try to increase the burden on someone who’s testing. It tries to keep in mind a person who understands testing, and a person who understands browsers. There’s a difference.
+    - For example, because CDP was devised to communicate with the browser, the commands are very specific to how the browser functions. Typically we, as testers, don't know how the browser functions or how these commands map to what we want to do. But instead the aim here is to design BiDi in a way that an end-user/tester understands. Those user needs and scenarios are kept in mind. 
 
 - Complementary to WD protocol, with an option to only have the BiDi connection.
 
