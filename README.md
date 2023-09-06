@@ -183,6 +183,7 @@ WD Classic | CDP |
 - Limited Low-Level DevTools Control
     - Some of the low-level DevTools controls, such as Performance Profiling, Network Interception, Advanced DOM Inspection, and JavaScript Console Interactions, are not available in WD Classic.
 - Unidirectional Communication
+    - Traditional HTTP-based communication, while suitable for certain scenarios, is not designed for persistent, low-latency connections. This is where WebSockets come into play. WebSockets provide a bi-directional communication channel between a client and a server, enabling real-time data transfer over a single TCP connection. 
     - WD Classic is slow because it lacks the BiDirectional communication with the browser. It means the users have to poll for element availability or visibility, which leads to delays in test automation.
     - Because WD Classic is synchronous and unidirectional, we can send a request and receive response messages for that request at a later time. But we can't actually know what's happening on the browser server side.
 
@@ -362,6 +363,7 @@ ____
 
 References:
 - https://developer.chrome.com/articles/webdriver-bidi/
+- https://www.honeybadger.io/blog/websocket-node/
 
 
 
