@@ -201,25 +201,27 @@ WD Classic | CDP |
 
 Once we have a solid understanding of the WD Classic and CDP, it's easier to understand why BiDi was created and came into play. At a certain point, Chromium developers wondered why shouldn't they merge both WD Classic and CDP tools into one protocol, so that they could utilize the power of both tools. That's how WD BiDi was born.
 
+WD BiDi is a cross-browser automation protocol. It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How? It takes the best of <code>Chrome DevTools Protocol</code> (e.g., fast bidirectional messaging & low level control) and <code>Classic WebDriver</code> (e.g., best cross-browser support, W3C Standard, testing-oriented), and combines them into the extraordinary WebDriver BiDi protocol. The vision behind BiDi is to give you full flexibility and let you write tests using any of your favorite tools and automate them in any browser or driver.
+
+This is certainly an exciting future for test automation. It takes a huge effort from various vendors working together to ensure this future.
+
+Selenium, WebDriverIO, Puppeteer and Playwright have already introduced initial support for WebDriver BiDi.
+
 <img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/0b1181b6-af35-4950-b678-33217172a02c" width=460>
 
 #### BiDi - Road to Better Automation
 
 Why BiDi?
-- Standardized approach
+- Standardized approach - W3C Compliance
+    - By adhering to the W3C WD specification, BiDi ensures standardized browser automation for consistency and compatibility with various tools and frameworks.
+    - WD BiDi is developed by the W3C committee, which developed the WD protocol. WD is not hosted and maintained by one organization. It’s a standardized approach, all browser vendors have to  implement the same API to allow testing. Any action we perform with WD BiDi is the same action in all the browsers. The approach that BiDi follows is relatively the same as WD, but it uses web sockets. 
+
 - Not specific to browser versions
 - Created with automation scenarios in mind
 - Complementary to WD protocol, with an option to only have the BiDi connection.
 - Low-level debugging capability
 - Developed by leading browser vendors together, keeping browsers in mind
 
-WD BiDi is a cross-browser automation protocol. It's an open standard that works across browsers, fast by default, and comes packed with all the features you need for test automation. How? It takes the best of <code>Chrome DevTools Protocol</code> (e.g., fast bidirectional messaging & low level control) and <code>Classic WebDriver</code> (e.g., best x-browser support, W3C Standard, testing-oriented), and combines them into the extraordinary WebDriver BiDi protocol. The vision behind BiDi is to give you full flexibility and let you write tests using any of your favorite tools and automate them in any browser or driver.
-
-This is certainly an exciting future for test automation. It takes a huge effort from various vendors working together to ensure this future.
-
-Selenium, WebDriverIO, Puppeteer and Playwright have already introduced initial support for WebDriver BiDi.
-
-One of the main features is Low Level Control. I.e., monitoring console messages to help verify the uncaught exceptions and intended logs. There's also full interoperability between WebDriver Classic and BiDi.
 
 WD BiDi is undoubtedly the future of browser automation!
 ____
