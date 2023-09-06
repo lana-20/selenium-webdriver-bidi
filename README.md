@@ -212,11 +212,15 @@ Selenium, WebDriverIO, Puppeteer and Playwright have already introduced initial 
 #### BiDi - Road to Better Automation
 
 Why BiDi?
-- Standardized approach - W3C Compliance
+- Standardized approach - W3C compliance
     - By adhering to the W3C WD specification, BiDi ensures standardized browser automation for consistency and compatibility with various tools and frameworks.
     - WD BiDi is developed by the W3C committee, which developed the WD protocol. WD is not hosted and maintained by one organization. It’s a standardized approach, all browser vendors have to  implement the same API to allow testing. Any action we perform with WD BiDi is the same action in all the browsers. The approach that BiDi follows is relatively the same as WD, but it uses web sockets. 
 
-- Not specific to browser versions
+- Cross-browser support - not specific to browser versions
+    - WD BiDi follows W3C standards, enabling cross-browser compatibility, allowing the same test scripts to automate tests across different browsers without major modifications, saving time and effort.
+    - Unlike CDP, as a W3C specification, BiDi is not an individual stable implementation.
+    - It’s not browser-specific. Once the BiDi protocol is in place, version specifics become a noise for a browser. Browsers are required to adapt the entire protocol as it is. They might do it incrementally until they complete it. And the protocol itself is something that can evolve (add/delete/modify items), but it will never lead to breaking changes.
+
 - Created with automation scenarios in mind
 - Complementary to WD protocol, with an option to only have the BiDi connection.
 - Low-level debugging capability
@@ -235,7 +239,6 @@ WD BiDi is still a work in progress, it's not been fully implemented yet. It's b
     - Open Source Automation Projects: Selenium, WebDriverIO
     - Companies offering Browser Automation Solutions: BrowserStack, SauceLabs.
 - A few [modules](https://www.selenium.dev/documentation/webdriver/bidirectional/bidirectional_w3c/) have already been implemented for Selenium and WebDriverIO and can be used in automation scripts.
-
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7)
 
