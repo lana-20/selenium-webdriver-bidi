@@ -121,7 +121,7 @@ When we do devTools.send(), we are sending the command.
         Optional.of(-122.335461),
         Optional.of(1)));
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/f8b58aea-ad71-4a35-8f41-4a10eed5c2c0)
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/722c4edc-dec4-495e-9232-76119565a4bf)
 
 After that, we can use Selenium commands to go to a particular URL and verify that the location has changed.
 
@@ -155,11 +155,11 @@ Let's review another Selenium CDP example:
     driver.quit();
 
 
-One source to check for the Selenium CDP documentation is https://www.selenium.dev/documentation/webdriver/bidirectional/:
+One source to check for the Selenium CDP documentation is https://www.selenium.dev/documentation/webdriver/bidirectional/. Be cautious with the experimental features, as those mught get deprecated at any time.
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/60a000ba-55ac-4cce-95c0-ef7af8c9610e)
 
-Another source is the CDP web site https://chromedevtools.github.io/devtools-protocol/:
+Another source is the CDP web site https://chromedevtools.github.io/devtools-protocol/.
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/a482cf4c-5296-40a9-8308-f141690fe2a7)
 
@@ -263,6 +263,8 @@ Why BiDi? How can we take advantage of WD BiDi in our automation scripts?
     - For example, because CDP was devised to communicate with the browser, the commands are very specific to how the browser functions. Typically we, as testers, don't know how the browser functions or how these commands map to what we want to do. But instead the aim here is to design BiDi in a way that an end-user/tester understands. Those user needs and scenarios are kept in mind. 
 
 - Complementary to WD protocol, with an option to only have the BiDi connection.
+    - There's also full interoperability between WD Classic and BiDi. BiDi is complementary to the WD protocol. The WD protocol kind of sits in parallel with it. Every time a WD protocol session is created, we can also create a BiDi session. The session gives us the information needed to connect to the socket.
+    - Along with that, many browser vendors are working toward eliminating the need for the users to download specific drivers. They are trying to implement this BiDi protocol within the browser, so we can directly communicate with the browsers for testing purposes.
 
 - Low latency, bidirectional communication
     - WD BiDi enables snappy bidirectional communication, allowing the browser to send real-time updates to the test script, improving synchronization and making testing faster and more reliable.
