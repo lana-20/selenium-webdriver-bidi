@@ -367,7 +367,7 @@ References:
 - https://w3c.github.io/webdriver-bidi/
 - https://github.com/w3c/webdriver-bidi/blob/master/roadmap.md
 - https://github.com/GoogleChromeLabs/chromium-bidi/milestones
-- wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi
+- https://wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi
 - bit.ly/bidi-demo-2023
 - https://youtu.be/3gDWWsc0h3Y
 - https://youtu.be/t7SaPlkMvZY?si=lD7rCBemYSfVgqPV
