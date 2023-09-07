@@ -128,6 +128,17 @@ After that, we can use Selenium commands to go to a particular URL and verify th
         driver.get(“https://my-location.org/”);
         driver.quit();
 
+#### Geolocation Testing 
+
+Geolocation Testing - a type of testing when we perform tests on our web app from IPs from various countries worldwide. Here are some features that can be tested with geolocation browser testing:
+
+- Geofencing - it’s a method that sends notifications to our users through mobile devices by leveraging the geographical area specified by the user, while using our web app. E.g., when I traveled to Vancouver, Canada, I received a notification from my booking app regarding local places to visit.
+- Geotagging - allows us to put a geographical tag over social media elements, such as photos, videos, QR codes, etc. Using geotagging, we can implement geographically-based authentication through QR code identification on our web app.
+- Geoblocking - it’s used to apply restrictions to our web app, concerning the laws and regulations of a country. Many online streaming companies - such as Amazon Prime Video, Disney, HBO, Netflix, etc. - use geoblocking to deliver rich media content based on the respective country’ standards. E.g., you may have seen something similar to the below captioned examples, when accessing a video through Prime Video or a thumbnail on Youtube:
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/03d9e1e9-4664-46e9-8508-7176be79dcd3)
+
+
 Let's review another Selenium CDP example:
 
     ChromeDriver driver = new ChromeDriver();
