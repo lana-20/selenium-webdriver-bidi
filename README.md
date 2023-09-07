@@ -155,6 +155,15 @@ Let's review another Selenium CDP example:
     driver.quit();
 
 
+One source to check for the Selenium CDP documentation is https://www.selenium.dev/documentation/webdriver/bidirectional/:
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/60a000ba-55ac-4cce-95c0-ef7af8c9610e)
+
+Another source is the CDP web site https://chromedevtools.github.io/devtools-protocol/:
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/a482cf4c-5296-40a9-8308-f141690fe2a7)
+
+
 #### CDP - Automation Tools
 
 Playwright and Puppeteer use CDP to control Chromium-based browsers (Chrome, Edge, Opera) programmatically for web automation and testing purposes.
