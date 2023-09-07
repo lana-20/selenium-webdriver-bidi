@@ -161,7 +161,7 @@ One source to check for the Selenium CDP documentation is https://www.selenium.d
 
 Another source is the CDP web site https://chromedevtools.github.io/devtools-protocol/.
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/a482cf4c-5296-40a9-8308-f141690fe2a7)
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/ab010162-2cf7-4cf3-b12a-908f67394ec3)
 
 
 #### CDP - Automation Tools
