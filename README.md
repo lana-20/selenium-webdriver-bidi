@@ -364,6 +364,18 @@ ____
 References:
 - https://developer.chrome.com/articles/webdriver-bidi/
 - https://www.honeybadger.io/blog/websocket-node/
+- https://w3c.github.io/webdriver-bidi/
+- https://github.com/w3c/webdriver-bidi/blob/master/roadmap.md
+- https://github.com/GoogleChromeLabs/chromium-bidi/milestones
+- wiki.mozilla.org/WebDriver/RemoteProtocol/WebDriver_BiDi
+- bit.ly/bidi-demo-2023
+- https://youtu.be/3gDWWsc0h3Y
+- https://youtu.be/t7SaPlkMvZY?si=lD7rCBemYSfVgqPV
+- http://youtu.be/ehPpDgqc2bE
+- http://youtu.be/gOsvQNnsVP8
+- http://youtu.be/O3_fPgPIvWQ
+- https://developer.chrome.com/blog/webdriver-bidi/
+- https://youtu.be/8k4-8-mMXs4
 
 
 
