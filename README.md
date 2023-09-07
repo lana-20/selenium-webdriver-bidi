@@ -128,6 +128,21 @@ After that, we can use Selenium commands to go to a particular URL and verify th
         driver.get(“https://my-location.org/”);
         driver.quit();
 
+Let's review another Selenium CDP example:
+
+    ChromeDriver driver = new ChromeDriver();
+    DevTools devTools = driver.getDevTools();
+    devTools.createSession();
+    devTools.send(Log.enable());
+    devTools.addListener(Log.entryAdded(),
+    	logEntry -> (
+    		System.out.println(“log: ” + logEntry.getText());
+     		System.out.println(“level: ” + logEntry.getLevel());
+    ));
+    driver.ger(“http://example.com”);
+    // Check the terminal output for the browser console messages.
+    driver.quit();
+
 
 #### CDP - Automation Tools
 
