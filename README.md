@@ -51,11 +51,9 @@ WD Classic was created in 2005. It's been a 18+ year long journey.
     - Other tools use the Selenium WD under the hood.
     - E.g., Katalon uses the Selenium jar file in the back-end, but it still comminicates to the browsers via the web DevTools protocol.
  
-
 ----
 
 ### Evolution of CDP
-
 
 #### DevTools Overview
 
@@ -64,7 +62,6 @@ WD Classic was created in 2005. It's been a 18+ year long journey.
 - This is where the DevTools come into play. They are integrated into all modern-day browsers, such as Chrome, Edge, Safari and Firefox.
 - You can use DevTools to verify how your web app looks. I.e., you can view the HTML and DOM structure at a very high level and then drill down into details as required.
 <img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/2f481d75-8c32-4967-96e1-aa17bf8e5a68" width=680>
-
 
 #### CDP Definition
 
@@ -84,7 +81,6 @@ That’s why we need a Protocol. It provides consistency for all Chromium-based 
 
 Additionally, since CDP is able to communicate with a browser driver - e.g., the Chrome Driver - the same protocol is used for the driver, which makes it easier to use it for automation purposes as well. Chrome driver is a binary that we use for testing purposes, which knows how to talk to the browser and drive it. 
 
-
 #### CDP Structure
 
 Concepts:
@@ -99,7 +95,6 @@ Commands give instructions to the browser to do something. We give it a command,
 An Event is a signal that something has happened in the system. Browsers are intrinsically even-driven in nature. When the DOM is loaded, there are lots of events that are fired, and the browser picks these up and uses this information in the DevTools window. DOM is just one example. The Protocol avails lots of events which the browser is driven by.
 
 Domains, Commands, and Events are the three core concepts of CDP. 
-
 
 #### Selenium CDP Support
 
@@ -125,7 +120,11 @@ When we do devTools.send(), we are sending the command.
         Optional.of(47.604653),
         Optional.of(-122.335461),
         Optional.of(1)));
-        
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/f8b58aea-ad71-4a35-8f41-4a10eed5c2c0)
+
+After that, we can use Selenium commands to go to a particular URL and verify that the location has changed.
+
         driver.get(“https://my-location.org/”);
         driver.quit();
 
