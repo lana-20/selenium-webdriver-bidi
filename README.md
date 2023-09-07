@@ -155,14 +155,16 @@ Let's review another Selenium CDP example:
     driver.quit();
 
 
-One source to check for the Selenium CDP documentation is https://www.selenium.dev/documentation/webdriver/bidirectional/. Be cautious with the experimental features, as those mught get deprecated at any time.
+One source to check for the Selenium CDP documentation is https://www.selenium.dev/documentation/webdriver/bidirectional/. 
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/60a000ba-55ac-4cce-95c0-ef7af8c9610e)
 
-Another source is the CDP web site https://chromedevtools.github.io/devtools-protocol/.
+Another source is the CDP web site https://chromedevtools.github.io/devtools-protocol/. Be cautious with the experimental features, as those might get deprecated at any time.
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/ab010162-2cf7-4cf3-b12a-908f67394ec3)
 
+Selenium supports all the CDP domains, events and commands listed in the protocol page above.
+Since it’s version-specific, with each new Chrome version the BiDi maintainers download the protocol, which is available in the open source repository, do the mapping, generate all the classes with respect to the binary, which is attached to Selenium libraries and sort of ship it out. It’s a lot of work per version that they try to keep up with. When a new version comes in, they try to release it within a week, so that they can support the latest CDP protocol.
 
 #### CDP - Automation Tools
 
