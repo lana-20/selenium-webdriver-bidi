@@ -344,6 +344,18 @@ We can capture a screenshot, open a new browser, close it, create a new tab/wind
 
 <img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/3a498c85-59bd-4649-b357-ab65c8c0a4f7" width=680>
 
+WD BiDi Goals |
+---|
+🟢 Notify of new contexts |
+🟢 Listen for JS errors |
+🟢 Listen for Console logs/errors |
+🟡 Bootstrap scripts |
+🟡 Mock back-ends and intercept network requests |
+🟡 Input Actions/Form submission |
+🔴 Access to native DevTools protocol |
+🔴 Dynamic changes to iframes or documents |
+🔴 Performance timings |
+
 ----
 
 ### WebDriver Bidi (BiDirectional) Protocol - Code Samples
