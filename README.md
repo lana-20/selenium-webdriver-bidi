@@ -51,7 +51,7 @@ We need to understand the evolution of WD Classic for easier understanding of th
 - When you develop a web app in an IDE, you are able to step through the code. But what if you want to debug the UI part of it? Let’s say you want to check the look and feel, e.g., verify that the correct styles were applied.
 - This is where the DevTools come into play. They are integrated into all modern-day browsers, such as Chrome, Edge, Safari and Firefox.
 - You can use DevTools to verify how your web app looks. I.e., you can view the HTML and DOM structure at a very high level and then drill down into details as required.
-<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/2f481d75-8c32-4967-96e1-aa17bf8e5a68" width=680>
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/2f481d75-8c32-4967-96e1-aa17bf8e5a68" width=1000>
 
 #### CDP Definition
 
@@ -88,7 +88,7 @@ Domains, Commands, and Events are the three core concepts of CDP.
 
 #### Selenium CDP Support
 
-<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/d336cd7e-5f83-4077-b16d-358a30eb904b" width=680>
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/c12c22c0-9c1b-4fe9-ba43-bbff382b2319)
 
 First, ChromeDriver is getting initialized. A simple session is created with the ChromeDriver.
 
@@ -106,10 +106,10 @@ Later we move on to actually sending the commands.
 When we do devTools.send(), we are sending the command.
 
         devTools.send(
-        Emulation.setGeolocationOverride(
-        Optional.of(47.604653),
-        Optional.of(-122.335461),
-        Optional.of(1)));
+          Emulation.setGeolocationOverride(
+            Optional.of(47.604653),
+            Optional.of(-122.335461),
+            Optional.of(1)));
 
 <img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/722c4edc-dec4-495e-9232-76119565a4bf" width=680>
 
@@ -128,9 +128,11 @@ Geolocation Testing - a type of testing when we perform tests on our web app fro
 
 <img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/03d9e1e9-4664-46e9-8508-7176be79dcd3" width=680>
 
+#### Console Logs
+
 Let's review another Selenium CDP example:
 
-<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/c7ff04ac-ceae-4b78-9c65-c50579b24a75" width=680>
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/3dfd1689-0e1e-4886-b740-73c3ff30d473)
 
 This example is very similar to what we saw earlier.
 
@@ -144,7 +146,7 @@ Then we enable the Log-related domain. This is the instruction which does not re
 
     devTools.send(Log.enable());
 
-Now we add a listener. Adding a listener is what allows us to listen for events.
+Now we add a listener. Adding a listener is what allows us to listen to events.
 
     devTools.addListener(Log.entryAdded(),
     	logEntry -> (
@@ -159,10 +161,9 @@ This covers how Selenium is able to support its domains, events, and commands fo
 We’ve accounted for how Selenium supports raw CDP. As SDETs, we need to understand it, the commands and domains that exist, what they do, why they do it - there are a lot of processes and overhead for any tester to understand and then execute this in the raw form. 
 Selenium just provides the support because the maintainers don’t have that BiDi stuff setup fully yet. This is not a recommended way of doing things. Anyone maintaining this code incurs a lot of overhead. But if you really need it, this is the way to get started, because it’s supported in all Selenium language bindings.
 
-
 One source to check for the Selenium CDP documentation is https://www.selenium.dev/documentation/webdriver/bidirectional/. 
 
-<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/60a000ba-55ac-4cce-95c0-ef7af8c9610e" width=680>
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/60a000ba-55ac-4cce-95c0-ef7af8c9610e" width=1000>
 
 Another source is the CDP web site https://chromedevtools.github.io/devtools-protocol/. Be cautious with the experimental features, as those might get deprecated at any time.
 
@@ -316,7 +317,7 @@ For the past 6 months (as of August 2023), the WD team has been working hard on 
     - Companies offering Browser Automation Solutions: BrowserStack, SauceLabs.
 - A few [modules](https://www.selenium.dev/documentation/webdriver/bidirectional/bidirectional_w3c/) have already been implemented for Selenium and WebDriverIO and can be used in automation scripts.
 
-<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7" width=680>
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7" width=1000>
 
 Domains/Modules:
 - <code>session/</code> - is a basic module where you can start a BiDi session
@@ -370,53 +371,7 @@ It shows you a small prompt, a dialogue box asking for the username and password
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/07823db2-2f0a-440b-bca7-b59213d37100)
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/53818654-c618-48fe-97e9-b8a30f382e13)
-    
-    package.com.company.wdbidi;
-    
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
-    import org.openqa.selenium.HasAuthentication;
-    import org.openqa.selenium.UsernameAndPassword;
-    import org.openqa.selenium.chrome.ChromeDriver;
-    import org.openqa.selenium.chrome.ChromeOptions;
-    import org.openqa.selenium.devtools.DevTools;
-    import java.net.URI;
-    import java.util.function.Predicate;
-    import static org.assert().core.api.Assertions.assertThat;
-    
-    public class RegisterBasicAuthTest {
-    
-      private ChromeDriver chromedriver = null;
-    
-      @Before
-      public void setup() {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeDriver = new ChromeDriver(ChromeOptions);
-        DevTools devTools = chromeDriver.getDevTools();
-        devTools.createSession();
-      }
-    
-      @After
-      public void cleanup() {
-      chromeDriver.quit();
-      }
-    
-      @Test
-      public void registerBasicAuthTest() throws InterruptedException {
-      Predicate<URI> uriPredicate = uri -> uri.getHost().contains(“httpbin.org”);
-    	
-      ((HasAuthentication) chromeDriver).register(uriPredicate, UsernameAndPassword.of(“foo”, “bar”));
-      chromeDriver.get(“http://httpbin.org/basic-auth/foo/bar”);
-    
-      Thread.sleep(5000);
-    
-      String pageSource = chromeDriver.getPageSource();
-    
-      assertThat(pageSource.contains(“authenticated”)).isTrue();
-      }
-    }
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/d7217388-dd2c-47fa-8fa0-f26e8e321f03)
 
 #### Console Logs
 
