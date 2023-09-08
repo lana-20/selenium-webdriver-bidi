@@ -422,6 +422,8 @@ It shows you a small prompt, a dialogue box asking for the username and password
 
 #### JavaScript Exception Logs
 
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/dd2878c6-b24c-4c2b-9037-6ba80f971165)
+
 
 ____
 
