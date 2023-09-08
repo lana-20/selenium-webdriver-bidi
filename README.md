@@ -376,7 +376,13 @@ It shows you a small prompt, a dialogue box asking for the username and password
 
 #### [Console Logs](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/LogTest.java)
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/740c2c4d-3c36-4623-98e2-f45c55730398)
+Java:
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/ea3b65cb-0379-4502-81bc-f61bef02378c)
+
+JavaScript:
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/7534e51f-2e95-41a6-88ea-2f72296f7c95)
 
 #### [JavaScript Exception Logs](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/javaScriptErrorLogTest.java)
 
