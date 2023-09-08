@@ -102,7 +102,7 @@ Domains, Commands, and Events are the three core concepts of CDP.
 
 #### Selenium CDP Support
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/d336cd7e-5f83-4077-b16d-358a30eb904b)
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/d336cd7e-5f83-4077-b16d-358a30eb904b" width=680>
 
 First, ChromeDriver is getting initialized. A simple session is created with the ChromeDriver.
 
@@ -125,7 +125,7 @@ When we do devTools.send(), we are sending the command.
         Optional.of(-122.335461),
         Optional.of(1)));
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/722c4edc-dec4-495e-9232-76119565a4bf)
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/722c4edc-dec4-495e-9232-76119565a4bf" width=680>
 
 After that, we can use Selenium commands to go to a particular URL and verify that the location has changed.
 
@@ -140,32 +140,47 @@ Geolocation Testing - a type of testing when we perform tests on our web app fro
 - Geotagging - allows us to put a geographical tag over social media elements, such as photos, videos, QR codes, etc. Using geotagging, we can implement geographically-based authentication through QR code identification on our web app.
 - Geoblocking - it’s used to apply restrictions to our web app, concerning the laws and regulations of a country. Many online streaming companies - such as Amazon Prime Video, Disney, HBO, Netflix, etc. - use geoblocking to deliver rich media content based on the respective country’ standards. E.g., you may have seen something similar to the below captioned examples, when accessing a video through Prime Video or a thumbnail on Youtube:
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/03d9e1e9-4664-46e9-8508-7176be79dcd3)
-
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/03d9e1e9-4664-46e9-8508-7176be79dcd3" width=680>
 
 Let's review another Selenium CDP example:
+
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/c7ff04ac-ceae-4b78-9c65-c50579b24a75" width=680>
+
+This example is very similar to what we saw earlier.
+
+In the first 3 lines - we initialize a driver, get devTools instruments, and create a session.
 
     ChromeDriver driver = new ChromeDriver();
     DevTools devTools = driver.getDevTools();
     devTools.createSession();
+
+Then we enable the Log-related domain. This is the instruction which does not return any information, it’s a mere instruction to enable the Log domain.
+
     devTools.send(Log.enable());
+
+Now we add a listener. Adding a listener is what allows us to listen for events.
+
     devTools.addListener(Log.entryAdded(),
     	logEntry -> (
     		System.out.println(“log: ” + logEntry.getText());
      		System.out.println(“level: ” + logEntry.getLevel());
     ));
-    driver.ger(“http://example.com”);
-    // Check the terminal output for the browser console messages.
-    driver.quit();
+
+We tell the script to inform us when any entry of log events happens on the server.
+
+This covers how Selenium is able to support its domains, events, and commands for almost any protocol version that comes in. But it’s version specific. If we send something today, the code works. Tomorrow it might have more parameters, or an event name changed, some features deprecated. The script may or may not work. We must be extra cautious version-specifics-wise.
+
+We’ve accounted for how Selenium supports raw CDP. As SDETs, we need to understand it, the commands and domains that exist, what they do, why they do it - there are a lot of processes and overhead for any tester to understand and then execute this in the raw form. 
+Selenium just provides the support because the maintainers don’t have that BiDi stuff setup fully yet. This is not a recommended way of doing things. Anyone maintaining this code incurs a lot of overhead. But if you really need it, this is the way to get started, because it’s supported in all Selenium language bindings.
 
 
 One source to check for the Selenium CDP documentation is https://www.selenium.dev/documentation/webdriver/bidirectional/. 
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/60a000ba-55ac-4cce-95c0-ef7af8c9610e)
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/60a000ba-55ac-4cce-95c0-ef7af8c9610e" width=680>
 
 Another source is the CDP web site https://chromedevtools.github.io/devtools-protocol/. Be cautious with the experimental features, as those might get deprecated at any time.
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/ab010162-2cf7-4cf3-b12a-908f67394ec3)
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/ab010162-2cf7-4cf3-b12a-908f67394ec3" width=680>
 
 Selenium supports all the CDP domains, events and commands listed in the protocol page above.
 Since it’s version-specific, with each new Chrome version the BiDi maintainers download the protocol, which is available in the open source repository, do the mapping, generate all the classes with respect to the binary, which is attached to Selenium libraries and sort of ship it out. It’s a lot of work per version that they try to keep up with. When a new version comes in, they try to release it within a week, so that they can support the latest CDP protocol.
@@ -235,7 +250,6 @@ WD Classic | CDP |
 - Lacks Accommodation for Automation Needs
     - And while CDP supports automation, it’s important to understand that it was not designed with automation in mind. It was designed to provide this physical DevTools experience. It doesn’t keep that need for common automation use cases. It doesn’t necessarily address that in a straightforward manner.
 
-
 ----
 
 ### WD BiDi - Advantages
@@ -303,7 +317,7 @@ WD BiDi is undoubtedly the future of browser automation!
      
 With BiDi, we can also use the Browser Context module, inject scripts, and perform all sorts of DevTools low-level controls.
 
-___
+----
 
 ### WD BiDi Implementation Status
 
@@ -316,7 +330,7 @@ For the past 6 months (as of August 2023), the WD team has been working hard on 
     - Companies offering Browser Automation Solutions: BrowserStack, SauceLabs.
 - A few [modules](https://www.selenium.dev/documentation/webdriver/bidirectional/bidirectional_w3c/) have already been implemented for Selenium and WebDriverIO and can be used in automation scripts.
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7)
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/e205ab4d-a0b6-4775-a18b-d316ab0a1ca7" width=680>
 
 Domains/Modules:
 - <code>session/</code> - is a basic module where you can start a BiDi session
@@ -342,7 +356,7 @@ We can understand the content by examining the domain. When we open the <code>br
 - <code>set_viewport/</code>
 We can capture a screenshot, open a new browser, close it, create a new tab/window, navigate to a URL, print pages, or save to PDF, etc.
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/3a498c85-59bd-4649-b357-ab65c8c0a4f7)
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/3a498c85-59bd-4649-b357-ab65c8c0a4f7" width=680>
 
 ----
 
