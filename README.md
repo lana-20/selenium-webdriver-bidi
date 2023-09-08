@@ -428,7 +428,7 @@ It shows you a small prompt, a dialogue box asking for the username and password
 
 #### Network Interceptor
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/c8b3dd85-b445-4d90-aa3b-33efda885783)
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/30be2bfe-03ba-490f-a17f-32a2bac96453)
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/de7c4a99-cb15-49f1-82b0-d850bc88a069)
 
