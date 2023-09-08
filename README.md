@@ -31,6 +31,8 @@ WD Classic was created in 2005. It's been a 18+ year long journey.
 - W3C makes WD a standard specification. Now, Selenium WD communicates with the browsers via the W3C protocol, not JSON wire. Selenium v4 and other tools that use WD communicate via W3C protocol.
 - The protocol was introduced to provide consistency and stability for test cases when using the WD.
 
+We need to understand the evolution of WD Classic for easier understanding of the WD BiDi concept.
+
 #### WD Classic - Automation Tools:
 - Selenium WD
     - Open-source suite of tools (ecosystem) for automating web apps.
@@ -190,7 +192,7 @@ Here is a specific example of CDP implementation by Puppeteer:
 
 ### WD Classic vs CDP
 
-In recent years, CDP has gained a lot of traction in the automation industry. Let's compare <code>WD Classic</code> and <code>CDP</code> side by side.
+In recent years, CDP has gained a lot of traction in the automation industry. Let's compare how <code>WD Classic</code> and <code>CDP</code> implementation differs side-by-side.
 
 WD Classic | CDP |
 ---|---|
@@ -304,6 +306,7 @@ ___
 ### WD BiDi Implementation Status
 
 WD BiDi is still a work in progress, it's not been fully implemented yet. It's been under development for the past 2 years.
+For the past 6 months (as of August 2023), the WD team has been working hard on implementing BiDi in Selenium and WebDriverIO.
 
 - WD BiDi specification is a WIP, supported by diverse collaborators, such as:
     - Browser Vendors: Chrome, Edge, Firefox, Safari
