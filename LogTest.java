@@ -24,7 +24,7 @@ public class LogTest {
 		// Depending on the implementation, events from either of the domains can be fired for console logs
 		
 		// Usage in accordance with the DevTools version
-		devTools.addListener(org.openqa.selenium.devtools.v167.runtime.Runtime.consoleAPICAlled(), consoleAPICalled -> {
+		devTools.addListener(org.openqa.selenium.devtools.v167.runtime.Runtime.consoleAPICalled(), consoleAPICalled -> {
 			logs.add(consoleAPICalled.getArgs().get(0).getValue().get().toString());
 		});
 		
