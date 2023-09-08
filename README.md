@@ -368,6 +368,8 @@ If you request something from the server, the request goes to the browser, the b
 We’ll use AUT: http://httpbin.org/basic-auth/foo/bar
 It shows you a small prompt, a dialogue box asking for the username and password. When you enter username “foo” and password “bar”, you’ll get correctly authenticated.
 
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/07823db2-2f0a-440b-bca7-b59213d37100)
+
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/53818654-c618-48fe-97e9-b8a30f382e13)
     
     package.com.company.wdbidi;
@@ -424,6 +426,11 @@ It shows you a small prompt, a dialogue box asking for the username and password
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/dd2878c6-b24c-4c2b-9037-6ba80f971165)
 
+#### Network Interceptor
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/c8b3dd85-b445-4d90-aa3b-33efda885783)
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/de7c4a99-cb15-49f1-82b0-d850bc88a069)
 
 ____
 
