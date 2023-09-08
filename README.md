@@ -343,7 +343,8 @@ We can understand the content by examining the domain. When we open the <code>br
 - <code>set_viewport/</code>
 We can capture a screenshot, open a new browser, close it, create a new tab/window, navigate to a URL, print pages, or save to PDF, etc.
 
-<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/3a498c85-59bd-4649-b357-ab65c8c0a4f7" width=680>
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/3a498c85-59bd-4649-b357-ab65c8c0a4f7" width=1000>
+
 
 WD BiDi Goals |
 ---|
@@ -361,7 +362,7 @@ WD BiDi Goals |
 
 ### WebDriver Bidi (BiDirectional) Protocol - Code Samples
 
-#### Register Basic Authentication
+#### [Register Basic Authentication](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/Register_Basic_Authentication.java)
 
 Basic Authentication is a common way to safeguard your resources on the internet.
 If you request something from the server, the request goes to the browser, the browser passes it to the server. The request is basically stating “I want authentication” and yields a dialogue box with username and password fields to fill. Once you enter the basic username and password, you’ll be able to easily access the resources. It’s a rather straightforward concept. 
@@ -373,17 +374,17 @@ It shows you a small prompt, a dialogue box asking for the username and password
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/d7217388-dd2c-47fa-8fa0-f26e8e321f03)
 
-#### Console Logs
+#### [Console Logs](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/LogTest.java)
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/8f76ca2c-f431-47e9-9aca-c5386743a90c)
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/740c2c4d-3c36-4623-98e2-f45c55730398)
 
-#### JavaScript Exception Logs
+#### [JavaScript Exception Logs](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/javaScriptErrorLogTest.java)
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/dd2878c6-b24c-4c2b-9037-6ba80f971165)
 
-#### Network Interceptor
+#### [Network Interceptor](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/NetworkInterceptorTest.java)
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/30be2bfe-03ba-490f-a17f-32a2bac96453)
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/ba8af556-826f-4802-81a4-f69fda081acf)
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/de7c4a99-cb15-49f1-82b0-d850bc88a069)
 
