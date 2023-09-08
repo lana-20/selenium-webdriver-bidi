@@ -293,7 +293,7 @@ WD BiDi is undoubtedly the future of browser automation!
         - If we have a JS-rich app that throws an error at some point in your automation, we can listen to those errors with WD BiDi and debug them to fix our issue.
 - Listen to console logs
     - WD BiDi enables real-time capture and analysis of console logs, aiding in debugging and logging during test execution.
-        - We can listen to the browser console in the app and fetch the logs for the debuggin purpose.
+        - We can listen to the browser console in the app and fetch the logs for the debugging purpose.
 - DOM Mutation
     - WD BiDi allows monitoring and reacting to changes in the DOM, facilitating dynamic web app testing and validation.
         - We can monitor the DOM structure/tree. BiDi can trigger an event whenever we want to inject any script.
@@ -351,7 +351,7 @@ WD BiDi Goals |
 🟢 Listen for Console logs/errors |
 🟡 Bootstrap scripts |
 🟡 Mock back-ends and intercept network requests |
-🟡 Input Actions/Form submission |
+🔴 Input Actions/Form submission |
 🔴 Access to native DevTools protocol |
 🔴 Dynamic changes to iframes or documents |
 🔴 Performance timings |
