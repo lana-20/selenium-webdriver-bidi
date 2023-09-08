@@ -1,6 +1,3 @@
-[UNDER CONSTRUCTION]
-
-
 # Selenium WebDriver BiDi (WD BiDi) - BlackOps-Flavored Codified DevTools - Kismet Child of WebDriver Classic (WD Classic) and Chrome DevTools Protocol (CDP)
 
 Agenda:
@@ -20,18 +17,7 @@ WD Classic was created in 2005. It's been a 18+ year long journey.
 
 #### WD Classic - History:
 
-2004 -- Selenium RC
-- Jason Huggins introduces the fist automation tool in 2004. RC worked by installing a remote control server in the browser machines. It sent a command to a JS engine called Selenium Core. And the Selenium Core, residing in the browser engine, executed that command. RC used to be quite popular, but came to a disadvantage because of its complex architecture. Moreover, its API was not purely object oriented.
-
-2005 -- WebDriver
-- Simon Stewart introduces the WedDriver protocol in 2005. The driver communicates to browsers via JSON wire protocol WD API.
-
-2009 -- Selenium WebDriver
-- Selenium and WebDriver merge into a new tool called Selenium WebDriver. JSON wire protocol is still used to communicate with the browsers.
-
-2018 -- WD becomes a W3C standard
-- W3C makes WD a standard specification. Now, Selenium WD communicates with the browsers via the W3C protocol, not JSON wire. Selenium v4 and other tools that use WD communicate via W3C protocol.
-- The protocol was introduced to provide consistency and stability for test cases when using the WD.
+<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/49b625d8-03ef-4e8d-850e-c51610257c90" width=880>
 
 We need to understand the evolution of WD Classic for easier understanding of the WD BiDi concept.
 
