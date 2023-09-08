@@ -414,6 +414,10 @@ It shows you a small prompt, a dialogue box asking for the username and password
       }
     }
 
+#### Console Logs
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/8f76ca2c-f431-47e9-9aca-c5386743a90c)
+
 ____
 
 References:
