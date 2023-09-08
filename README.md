@@ -3,12 +3,14 @@
 
 # Selenium WebDriver BiDi (WD BiDi) - BlackOps-Flavored Codified DevTools - Kismet Child of WebDriver Classic (WD Classic) and Chrome DevTools Protocol (CDP)
 
-### Evolution of WD Classic
-### Evolution of CDP
-### WD Classic vs CDP
-### WD BiDi and Its Advantages
-### WD BiDi Implementation Status
-### BiDi API Code Samples
+Agenda:
+
+### [Evolution of WD Classic](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/README.md#evolution-of-wd-classic-1)
+### [Evolution of CDP](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/README.md#evolution-of-cdp-1)
+### [WD Classic vs CDP](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/README.md#wd-classic-vs-cdp-1)
+### [WD BiDi and Its Advantages](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/README.md#wd-bidi---advantages)
+### [WD BiDi Implementation Status](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/README.md#wd-bidi-implementation-status-1)
+### [BiDi API Code Samples](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/README.md#webdriver-bidi-bidirectional-protocol---code-samples)
 
 ----
 
