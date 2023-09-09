@@ -396,7 +396,7 @@ JavaScript:
 
 #### [DOM Mutation Observer](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/dom_mutation_observer.java)
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/0df4d3f5-916b-4389-a4ce-30a82e342970)
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/ed88faa5-834b-4048-ae06-fa1346bc237b)
 
 ____
 
