@@ -11,7 +11,7 @@ public class DomMutationObserverTest {
   private DevTools devTools = null;
   
   @Before
-	public void setup() {
+    public void setup() {
     ChromeOptions chromeOptions = new chromeOptions();
     chromeDriver = new ChromeDriver(chromeOptions);
     devTools = chromeDriver.getDevTools();
