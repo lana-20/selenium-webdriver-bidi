@@ -367,10 +367,12 @@ WD BiDi Goals |
 Basic Authentication is a common way to safeguard your resources on the internet.
 If you request something from the server, the request goes to the browser, the browser passes it to the server. The request is basically stating “I want authentication” and yields a dialogue box with username and password fields to fill. Once you enter the basic username and password, you’ll be able to easily access the resources. It’s a rather straightforward concept. 
 
-We’ll use AUT: http://httpbin.org/basic-auth/foo/bar
+We’ll use AUT: http://httpbin.org/basic-auth/
 It shows you a small prompt, a dialogue box asking for the username and password. When you enter username “foo” and password “bar”, you’ll get correctly authenticated.
 
-![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/07823db2-2f0a-440b-bca7-b59213d37100)
+Let’s check what happens in the background, in the context of response and request headers. We are especially interested in the Request Headers part, where it shows <code>Basic encrypted_password</code>. This indicates that the Basic Auth information was sent.
+
+![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/865dacbb-0ad0-46f1-bc9d-0394f8448b29)
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/d7217388-dd2c-47fa-8fa0-f26e8e321f03)
 
@@ -395,6 +397,8 @@ JavaScript:
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/de7c4a99-cb15-49f1-82b0-d850bc88a069)
 
 #### [DOM Mutation Observer](https://github.com/lana-20/selenium-webdriver-bidi/blob/main/dom_mutation_observer.java)
+
+DOM - Document Object Model - is an object oriented representation of the HTML document. Programming languages often change these elements to display things. Every time this happens, as users we want to know when we’re testing our website for a particular web element. If an element has changed, its property has changed, or if something related to the DOM structure has changed, we might want to get notified. That’s exactly what the DOM mutation observer does.
 
 ![image](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/ed88faa5-834b-4048-ae06-fa1346bc237b)
 
