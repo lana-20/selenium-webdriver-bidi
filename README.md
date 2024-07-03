@@ -17,11 +17,15 @@ WD Classic was created in 2005. It's been a 18+ year long journey.
 
 #### WD Classic - History:
 
-<img src="https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/49b625d8-03ef-4e8d-850e-c51610257c90" width=880>
+![wdclassichistory](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/1009d145-3551-4ab4-a202-58d7651dc13b)
 
 We need to understand the evolution of WD Classic for easier understanding of the WD BiDi concept.
 
 #### WD Classic - Automation Tools:
+
+![wdclassictools](https://github.com/lana-20/selenium-webdriver-bidi/assets/70295997/60f6e793-a598-4e3a-a438-b605e4c3bca8)
+
+
 - Selenium WD
     - Open-source suite of tools (ecosystem) for automating web apps.
     - Used for testing and simulating user interactions in the browsers.
