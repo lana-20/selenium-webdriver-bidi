@@ -1,3 +1,6 @@
+NOTE: This repo has been refurbished and published on Medium: https://medium.com/@begunova/selenium-webdriver-bidi-kismet-child-of-webdriver-classic-and-chrome-devtools-protocol-7922f07cded5.
+
+
 # Selenium WebDriver BiDi (WD BiDi) - BlackOps-Flavored Codified DevTools - Kismet Child of WebDriver Classic (WD Classic) and Chrome DevTools Protocol (CDP)
 
 Agenda:
